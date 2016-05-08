@@ -19,4 +19,8 @@ app.get("/") { request in
     return Json(["Hello":"world"])
 }
 
+app.get("/:name") { request in
+    return Json(["Hello":request.parameters["name"] ?? "World"])
+}
+
 app.start(port: 8080)
