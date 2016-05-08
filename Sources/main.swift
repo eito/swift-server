@@ -9,5 +9,14 @@
 import Foundation
 import Vapor
 
-print("Successful integration")
+print("Starting server...")
 
+let app = Application()
+
+app.get("/") { request in
+ 
+    print("param: \(request.data.query)")
+    return Json(["Hello":"world"])
+}
+
+app.start(port: 8080)
