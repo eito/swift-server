@@ -1,9 +1,8 @@
-//
-//  Package.swift
-//  swift-server
-//
-//  Created by Eric Ito on 5/7/16.
-//  Copyright © 2016 Eric Ito. All rights reserved.
-//
+import PackageDescription
 
-import Foundation
+let package = Package(
+    name:"SwiftServer",
+    dependencies: [
+                      .Package(url: "https://github.com/eito/vapor.git", majorVersion: 0)
+    ]
+)

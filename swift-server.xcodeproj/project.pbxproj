@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E83C77F1CDF0F1600D85382 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83C77E1CDF0F1600D85382 /* main.swift */; };
+		4E83C7881CDF0FAC00D85382 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83C7871CDF0FAC00D85382 /* main.swift */; };
+		4E83E8101CDF104500EC474B /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83E80F1CDF104500EC474B /* Package.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,8 @@
 
 /* Begin PBXFileReference section */
 		4E83C77B1CDF0F1600D85382 /* swift-server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "swift-server"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E83C77E1CDF0F1600D85382 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		4E83C7871CDF0FAC00D85382 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = Sources/main.swift; sourceTree = SOURCE_ROOT; };
+		4E83E80F1CDF104500EC474B /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +43,8 @@
 		4E83C7721CDF0F1600D85382 = {
 			isa = PBXGroup;
 			children = (
-				4E83C77D1CDF0F1600D85382 /* swift-server */,
+				4E83E80F1CDF104500EC474B /* Package.swift */,
+				4E83C77D1CDF0F1600D85382 /* Sources */,
 				4E83C77C1CDF0F1600D85382 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,11 +57,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4E83C77D1CDF0F1600D85382 /* swift-server */ = {
+		4E83C77D1CDF0F1600D85382 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				4E83C77E1CDF0F1600D85382 /* main.swift */,
+				4E83C7871CDF0FAC00D85382 /* main.swift */,
 			);
+			name = Sources;
 			path = "swift-server";
 			sourceTree = "<group>";
 		};
@@ -119,7 +123,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E83C77F1CDF0F1600D85382 /* main.swift in Sources */,
+				4E83E8101CDF104500EC474B /* Package.swift in Sources */,
+				4E83C7881CDF0FAC00D85382 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,13 +216,18 @@
 		4E83C7831CDF0F1600D85382 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		4E83C7841CDF0F1600D85382 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -241,6 +251,7 @@
 				4E83C7841CDF0F1600D85382 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
